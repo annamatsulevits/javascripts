@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Get references to the input field and buttons
-    const inputField = document.querySelector('#inputField'); // Replace with your actual input field ID
-    const submitButton = document.querySelector('#submitButton'); // Replace with your actual submit button ID
-    const downloadButton = document.querySelector('#downloadButton'); // Replace with your actual download button ID
+    const inputField = document.querySelector('#textInput'); // Make sure this matches exactly with Sparkle's ID
+    const submitButton = document.querySelector('#submitButton'); // Make sure this matches exactly with Sparkle's ID
+    const downloadButton = document.querySelector('#downloadButton'); // Make sure this matches exactly with Sparkle's ID
 
-    // Debugging: Log the elements to make sure they are being selected
+    // Log to check if IDs are correct
     console.log('Input field:', inputField);
     console.log('Submit button:', submitButton);
     console.log('Download button:', downloadButton);
@@ -20,17 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add event listener to the submit button
     submitButton.addEventListener('click', function() {
-        // Check if the input is correct
-        const expectedText = 'your-expected-text'; // Change to the text you expect
+        const expectedText = 'correct-text'; // Replace with the expected text value
 
-        // Debugging: Log the input value to check what the user enters
+        // Log input value to check
         console.log('Input value:', inputField.value);
 
         if (inputField.value === expectedText) {
-            // Show the download button if the input is correct
             downloadButton.style.display = 'block';
         } else {
-            // Optionally show an error message
             alert('Incorrect input!');
         }
     });
