@@ -1,7 +1,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Get references to the input field and the button
-    const inputField = document.querySelector('#inputField'); // Change '#inputField' to your actual input ID
+    const userInput = document.querySelector('#userInput'); // Change '#inputField' to your actual input ID
     const submitButton = document.querySelector('#submitButton'); // Change '#submitButton' to your actual button ID
     const downloadButton = document.querySelector('#downloadButton'); // Change '#downloadButton' to your actual download button ID
 
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add event listener to the submit button
     submitButton.addEventListener('click', function() {
         // Check if the input is correct
-        if (inputField.value === 'your-expected-text') {
+        if (userInput.value === 'your-expected-text') {
             // Show the download button if the text is correct
             downloadButton.style.display = 'block';
         } else {
